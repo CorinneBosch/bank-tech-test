@@ -39,6 +39,10 @@ describe Bank do
       expect(bank.account.balance).to eq(600)
     end
 
+    it 'informs account holder with success notification' do
+      expect(bank.credit(80)).to eq('£80 successfully deposited')
+    end
+
     it 'appends transaction message to accounts transactions array' do
       bank.credit(100)
       transactions_array = ["#{test_date} || 100.00 || || 600.00"]
@@ -50,6 +54,10 @@ describe Bank do
     it 'withdrawals money and subtracts amount from accounts balance' do
       bank.debit(80)
       expect(bank.account.balance).to eq(420)
+    end
+
+    it 'informs account holder with success notification' do
+      expect(bank.debit(110)).to eq('£110 successfully withdrawn')
     end
 
     it 'appends transaction message to accounts transactions array' do
