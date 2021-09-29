@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-29T11:34:50+01:00">2021-09-29T11:34:50+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-29T11:42:36+01:00">2021-09-29T11:42:36+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,8 +29,8 @@
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         1.22
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>10</b> relevant lines,
-    <span class="green"><b>10</b> lines covered</span> and
+    <b>18</b> relevant lines,
+    <span class="green"><b>18</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,20 +73,20 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#aaa9fa21383750ca7b835d9deeca7fadecd40e5d" class="src_link" title="lib/bank_account.rb">lib/bank_account.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.67</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#57a8db0596b5f75a85fd38d0726c0c68c397b461" class="src_link" title="spec/bank_account_spec.rb">spec/bank_account_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -153,7 +153,7 @@
 
             
 
-            <code class="ruby">  attr_reader :name</code>
+            <code class="ruby">  attr_reader :name, :balance</code>
           </li>
         </div>
       
@@ -175,7 +175,7 @@
 
             
 
-            <code class="ruby">  def initialize(account_holders_name)</code>
+            <code class="ruby">  DEFAULT_BALANCE  = 0</code>
           </li>
         </div>
       
@@ -186,29 +186,29 @@
 
             
 
+            <code class="ruby">  def initialize(account_holders_name, start_balance=DEFAULT_BALANCE)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="6">
+            <span class="hits">3</span>
+            
+
+            
+
             <code class="ruby">   @name = account_holders_name</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
+          <li class="covered" data-hits="3" data-linenumber="7">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">   @balance = start_balance</code>
           </li>
         </div>
       
@@ -219,7 +219,7 @@
 
             
 
-            <code class="ruby">  # def name </code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -230,23 +230,12 @@
 
             
 
-            <code class="ruby">  #   @name </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">  # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -275,8 +264,8 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -387,35 +376,35 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # it &#39;with a start balance of 0 if none given&#39; do </code>
+            
+
+            <code class="ruby">    it &#39;with a default start balance of 0 when none given&#39; do </code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #   account = BankAccount.new(&#39;Sir David Attenborough&#39;)</code>
+            
+
+            <code class="ruby">      account = BankAccount.new(&#39;Sir David Attenborough&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #   expect(account.name).to eq(&#39;Sir David Attenborough&#39;)</code>
+            
+
+            <code class="ruby">      expect(account.balance).to eq(0)</code>
           </li>
         </div>
       
@@ -426,7 +415,7 @@
 
             
 
-            <code class="ruby">    # end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -437,12 +426,67 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;with a custom start balance when given&#39; do </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      account = BankAccount.new(&#39;Sir David Attenborough&#39;, 2000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(account.balance).to eq(2000)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -453,7 +497,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 

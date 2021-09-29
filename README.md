@@ -26,6 +26,7 @@ To test all units and features at once in your terminal.
 
 ```
 $ rspec
+$ rspec -fd
 $ rspec spec/bank_account_spec.rb
 ```
 
