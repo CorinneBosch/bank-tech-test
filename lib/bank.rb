@@ -2,26 +2,26 @@ require_relative 'account'
 require_relative 'transaction'
 
 class Bank
-  attr_reader :name, :balance, :transactions
+  attr_reader :account
 
-  def initialize
-    @account = 
+  def initialize(account = Account.new(account_holders_name, start_balance=DEFAULT_BALANCE))
+    @account = account
   end
 
   def credit(deposit_amount)
-    @balance += deposit_amount
-    @transactions.push(Transaction.new.credit(deposit_amount, @balance))
+    @account.balance += deposit_amount
+    # @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
   end
 
   def debit(withdrawal_amount)
-    @balance -= withdrawal_amount
-    @transactions.push(Transaction.new.debit(withdrawal_amount, @balance))
+    @account.balance -= withdrawal_amount
+    @account.transactions.push(Transaction.new.debit(withdrawal_amount, @account.balance))
   end
 
 end
 
-# account = Bank.new('Sir David Attenborough', 50.0098)
-# p account.balance
+# bank = Bank.new(Account.new('Sir David Attenborough', 50.0098))
+# p bank.account
 # account.credit(50)
 # p account.balance
 # p account.transactions
