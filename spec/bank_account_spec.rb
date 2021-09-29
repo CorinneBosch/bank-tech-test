@@ -1,21 +1,21 @@
 require 'bank_account'
 
-describe BankAccount do
+describe Bank do
   let(:account) { described_class.new('Sir David Attenborough', 500) }
 
   describe '#initializes' do
     it 'with a name of the account holder' do 
-      new_account = BankAccount.new('Sir David Attenborough')
+      new_account = Bank.new('Sir David Attenborough')
       expect(new_account.name).to eq('Sir David Attenborough')
     end
 
     it 'with a default start balance of 0 when none given' do 
-      new_account = BankAccount.new('Sir David Attenborough')
+      new_account = Bank.new('Sir David Attenborough')
       expect(new_account.balance).to eq(0)
     end
 
     it 'with a custom start balance when given' do 
-      new_account = BankAccount.new('Sir David Attenborough', 2000)
+      new_account = Bank.new('Sir David Attenborough', 2000)
       expect(new_account.balance).to eq(2000)
     end
 
@@ -39,8 +39,8 @@ describe BankAccount do
   end
 
   describe '#print_statement' do
-    it 'displays table with 4 titles' do
-      expect(account.print_statement).to eq('date || credit || debit || balance')
-    end
+    # it 'displays table with 4 titles' do
+    #   expect(account.print_statement).to eq('date || credit || debit || balance')
+    # end
   end
 end
