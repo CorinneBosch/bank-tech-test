@@ -14,17 +14,23 @@ class Bank
   def credit(deposit_amount)
     @account.balance += deposit_amount
     @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
-    "#{deposit_amount} successfully deposited"
+    "£#{deposit_amount} successfully deposited"
   end
 
   def debit(withdrawal_amount)
     @account.balance -= withdrawal_amount
     @account.transactions.push(Transaction.new.debit(withdrawal_amount, @account.balance))
-    "#{withdrawal_amount} successfully withdrawn"
+    "£#{withdrawal_amount} successfully withdrawn"
   end
 
   def print_statement
+    check_transactions
     output(@account.transactions)
+  end
+
+  private
+  def check_transactions
+    raise 'You have no transactions thus far' if @account.transactions.empty?
   end
 end
 
@@ -32,6 +38,7 @@ end
 # p bank.credit(500)
 # p bank.debit(20)
 # p bank.credit(400)
-# p bank.debit(15)
+# p bank.debit(15)]
+# bank.account.transactions
 # p '--' * 20
 # bank.print_statement

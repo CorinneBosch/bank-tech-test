@@ -59,9 +59,21 @@ describe Bank do
     end
   end
 
-  # describe '#print_statement' do
-  #   it 'displays table with 4 titles' do
-  #     expect(account.print_statement).to eq('date || credit || debit || balance')
-  #   end
-  # end
+  describe '#print_statement' do
+    it 'returns accout transactions in reverse chronological order' do
+      bank.credit(200)
+      bank.debit(80)
+      expect(bank.print_statement).to eq([
+        "#{test_date} || || 80.00 || 620.00", 
+        "#{test_date} || 200.00 || || 700.00"
+        ])
+    end
+  
+    context 'raises error' do 
+      it 'when account transactions is empty' do
+        message = 'You have no transactions thus far'
+        expect { bank.print_statement}.to raise_error message
+      end
+    end
+  end
 end
