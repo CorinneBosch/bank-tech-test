@@ -18,6 +18,10 @@ describe BankAccount do
       new_account = BankAccount.new('Sir David Attenborough', 2000)
       expect(new_account.balance).to eq(2000)
     end
+
+    it 'with an empty array of transactios' do 
+      expect(account.transactions).to be_empty
+    end
   end
 
   describe '#credit' do

@@ -1,10 +1,11 @@
 class BankAccount
-  attr_reader :name, :balance, :print_statement
+  attr_reader :name, :balance, :transactions, :print_statement
 
   DEFAULT_BALANCE  = 0
   def initialize(account_holders_name, start_balance=DEFAULT_BALANCE)
    @name = account_holders_name
    @balance = start_balance
+   @transactions =[]
   end
 
   def credit(deposit_amount)
