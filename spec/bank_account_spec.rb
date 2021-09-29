@@ -1,7 +1,7 @@
 require 'bank_account'
 
 describe BankAccount do
-  let(:account) { described_class.new('Sir David Attenborough') }
+  let(:account) { described_class.new('Sir David Attenborough', 500) }
 
   describe '#initializes' do
     it 'with a name of the account holder' do 
@@ -21,16 +21,17 @@ describe BankAccount do
   end
 
   describe '#credit' do
-    it 'deposits money and adds to accounts balance' do
+    it 'deposits money and adds amount to accounts balance' do
       account.credit(1000)
-      expect(account.balance).to eq(1000)
+      expect(account.balance).to eq(1500)
     end
   end
 
   describe '#debit' do
-    # it '' do
-      
-    # end
+    it 'withdrawals money and subtracts amount from accounts balance' do
+      account.debit(80)
+      expect(account.balance).to eq(420)
+    end
   end
 
   describe '#statement' do
