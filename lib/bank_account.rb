@@ -1,5 +1,5 @@
 class BankAccount
-  attr_reader :name, :balance
+  attr_reader :name, :balance, :print_statement
 
   DEFAULT_BALANCE  = 0
   def initialize(account_holders_name, start_balance=DEFAULT_BALANCE)
@@ -14,4 +14,11 @@ class BankAccount
   def debit(withdrawal_amount)
     @balance -= withdrawal_amount
   end
+
+  def print_statement
+    'date || credit || debit || balance'
+  end
 end
+
+# account = BankAccount.new('Sir David Attenborough')
+# account.print_statement

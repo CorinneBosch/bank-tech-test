@@ -34,9 +34,9 @@ describe BankAccount do
     end
   end
 
-  describe '#statement' do
-    # it '' do
-      
-    # end
+  describe '#print_statement' do
+    it 'displays table with 4 titles' do
+      expect(account.print_statement).to eq('date || credit || debit || balance')
+    end
   end
 end
