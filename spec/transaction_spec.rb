@@ -17,22 +17,30 @@ describe Transaction do
       it 'when credit amount is not an integer' do
         deposit = 'Bitcoin'
         allow(account).to receive(:balance).and_return('200' + deposit)
-        expect { transaction.credit(deposit, account.balance) }
-        .to raise_error(Transaction::ERROR1)
+        expect { transaction.credit(deposit, account.balance) }.
+          to raise_error(Transaction::ERROR1)
       end
 
       it 'when credit amount not a fixnum and has decimal values' do
         deposit = 100.09
         allow(account).to receive(:balance).and_return(200 + deposit)
-        expect { transaction.credit(deposit, account.balance) }
-        .to raise_error(Transaction::ERROR2)
+        expect { transaction.credit(deposit, account.balance) }.
+          to raise_error(Transaction::ERROR2)
       end
 
       it 'when credit amount is below 5 pounds' do
         deposit = 4
         allow(account).to receive(:balance).and_return(200 + deposit)
-        expect { transaction.credit(deposit, account.balance) }
-        .to raise_error(Transaction::ERROR3)
+        expect { transaction.credit(deposit, account.balance) }.
+          to raise_error(Transaction::ERROR3)
+      end
+    end
+
+    context 'raises no error' do 
+      it 'when amount has decimal values with zero' do
+        deposit = 100.00
+        allow(account).to receive(:balance).and_return(200 + deposit)
+        expect { transaction.credit(deposit, account.balance) }.not_to raise_error
       end
     end
   end
@@ -56,15 +64,15 @@ describe Transaction do
       it 'when withdrawal amount is not an integer' do
         withdrawal = 'Chocolate Gold'
         allow(account).to receive(:balance).and_return(withdrawal)
-        expect { transaction.debit(withdrawal, account.balance) }
-        .to raise_error(Transaction::ERROR4)
+        expect { transaction.debit(withdrawal, account.balance) }.
+          to raise_error(Transaction::ERROR4)
       end
 
       it 'when withdrawal amount is negative' do
         withdrawal = -2.52
         allow(account).to receive(:balance).and_return(withdrawal)
-        expect { transaction.debit(withdrawal, account.balance) }
-        .to raise_error(Transaction::ERROR4)
+        expect { transaction.debit(withdrawal, account.balance) }.
+          to raise_error(Transaction::ERROR4)
       end
     end
   end

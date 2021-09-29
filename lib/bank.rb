@@ -2,7 +2,6 @@ require_relative 'account'
 require_relative 'statement'
 require_relative 'transaction'
 
-
 class Bank
   include Statement
   attr_reader :account

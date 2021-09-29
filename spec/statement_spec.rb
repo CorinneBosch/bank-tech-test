@@ -12,5 +12,4 @@ describe Statement do
       '14/01/2023 || || 500.00 || 2500.00'
       ])
   end
-
 end
