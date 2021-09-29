@@ -3,7 +3,7 @@ require 'date'
 class Transaction
 
   ERROR1 = 'Please deposit a valid amount above 5 pounds'
-  ERROR2 = 'Only deposits in pounds with no pence acceppted'
+  ERROR2 = 'Only deposits in pounds with no pence are acceppted'
   ERROR3 = 'Deposit amount needs to be above 5 pounds'
   ERROR4 = 'Please input a positive Number as valid withdraw currecy'
 
@@ -13,7 +13,7 @@ class Transaction
   end
 
   def debit(withdrawal_amount, balance)
-    debit_deposit(withdrawal_amount)
+    check_withdrawal(withdrawal_amount)
     "#{date_today} || || #{'%.2f' % withdrawal_amount} || #{'%.2f' % balance}"
   end
 
@@ -24,7 +24,7 @@ class Transaction
     raise ERROR3 if deposit_amount < 5
   end
 
-  def debit_deposit(withdrawal_amount)
+  def check_withdrawal(withdrawal_amount)
     raise ERROR4 if !withdrawal_amount.is_a?(Numeric)
     raise ERROR4 if withdrawal_amount < 0
   end
