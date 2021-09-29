@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-29T20:22:47+01:00">2021-09-29T20:22:47+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-29T21:03:35+01:00">2021-09-29T21:03:35+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.61
+         1.63
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>56</b> relevant lines,
-    <span class="green"><b>56</b> lines covered</span> and
+    <b>68</b> relevant lines,
+    <span class="green"><b>68</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,11 +73,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d053d2231095f74115685ce544949486995b9084" class="src_link" title="lib/transaction.rb">lib/transaction.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">22</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.06</td>
+            <td class="cell--number">1.91</td>
             
           </tr>
         
@@ -95,11 +95,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#df875c2a526dba14a3b63f98f7fe3ba8f053cd88" class="src_link" title="spec/transaction_spec.rb">spec/transaction_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">55</td>
-            <td class="cell--number">38</td>
-            <td class="cell--number">38</td>
+            <td class="cell--number">71</td>
+            <td class="cell--number">44</td>
+            <td class="cell--number">44</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.39</td>
+            <td class="cell--number">1.48</td>
             
           </tr>
         
@@ -134,8 +134,8 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>22</b> relevant lines.
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -197,18 +197,18 @@
 
             
 
-            <code class="ruby">  def credit(deposit_amount, balance)</code>
+            <code class="ruby">  ERROR1 = &#39;Please deposit a valid amount above 5 pounds&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="6">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    check_deposit(deposit_amount)</code>
+            <code class="ruby">  ERROR2 = &#39;Only deposits in pounds with no pence acceppted&#39;</code>
           </li>
         </div>
       
@@ -219,18 +219,18 @@
 
             
 
-            <code class="ruby">    &quot;#{date_today} || #{&#39;%.2f&#39; % deposit_amount} || || #{&#39;%.2f&#39; % balance}&quot;</code>
+            <code class="ruby">  ERROR3 = &#39;Deposit amount needs to be above 5 pounds&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">  ERROR4 = &#39;Please input a positive Number as valid withdraw currecy&#39;</code>
           </li>
         </div>
       
@@ -252,29 +252,29 @@
 
             
 
-            <code class="ruby">  def debit(withdrawal_amount, balance)</code>
+            <code class="ruby">  def credit(deposit_amount, balance)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="11">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="11">
+            <span class="hits">4</span>
             
 
             
 
-            <code class="ruby">    &quot;#{date_today} || || #{&#39;%.2f&#39; % withdrawal_amount} || #{&#39;%.2f&#39; % balance}&quot;</code>
+            <code class="ruby">    check_deposit(deposit_amount)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    &quot;#{date_today} || #{&#39;%.2f&#39; % deposit_amount} || || #{&#39;%.2f&#39; % balance}&quot;</code>
           </li>
         </div>
       
@@ -285,18 +285,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -307,7 +307,7 @@
 
             
 
-            <code class="ruby">  def check_deposit(deposit_amount)</code>
+            <code class="ruby">  def debit(withdrawal_amount, balance)</code>
           </li>
         </div>
       
@@ -318,56 +318,23 @@
 
             
 
-            <code class="ruby">    error1 = &#39;Please deposit a valid amount above 5 pounds&#39;</code>
+            <code class="ruby">    debit_deposit(withdrawal_amount)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="17">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    raise error1 if deposit_amount.is_a? String</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="18">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    error2 = &#39;Only deposits in pounds with no pence acceppted&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="19">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    raise error2 if deposit_amount.round(0) != deposit_amount</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="20">
+          <li class="covered" data-hits="2" data-linenumber="17">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    raise &#39;Deposit amount needs to be above 5 pounds&#39; if deposit_amount &lt; 5</code>
+            <code class="ruby">    &quot;#{date_today} || || #{&#39;%.2f&#39; % withdrawal_amount} || #{&#39;%.2f&#39; % balance}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -378,7 +345,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -389,24 +356,57 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
+          <li class="covered" data-hits="1" data-linenumber="20">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def date_today</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="24">
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def check_deposit(deposit_amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="22">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    raise ERROR1 if !deposit_amount.is_a?(Numeric)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="23">
             <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    Date.today.strftime(&quot;%d/%m/%Y&quot;)</code>
+            <code class="ruby">    raise ERROR2 if deposit_amount.round(0) != deposit_amount</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="24">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    raise ERROR3 if deposit_amount &lt; 5</code>
           </li>
         </div>
       
@@ -428,12 +428,56 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def debit_deposit(withdrawal_amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="28">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    raise ERROR4 if !withdrawal_amount.is_a?(Numeric)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="29">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    raise ERROR4 if withdrawal_amount &lt; 0</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -444,13 +488,46 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def date_today</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="33">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    Date.today.strftime(&quot;%d/%m/%Y&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
             
 
-            <code class="ruby"># acc = Transaction.new.credit(&#39;banana&#39;, 200)</code>
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -537,8 +614,8 @@
     
 
     <div class="t-line-summary">
-      <b>38</b> relevant lines.
-      <span class="green"><b>38</b> lines covered</span> and
+      <b>44</b> relevant lines.
+      <span class="green"><b>44</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -594,19 +671,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="5">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="9" data-linenumber="5">
+            <span class="hits">9</span>
             
 
             
 
-            <code class="ruby">  let(:transaction) { described_class.new }</code>
+            <code class="ruby">  let(:transaction) { Transaction.new }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="6">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="9" data-linenumber="6">
+            <span class="hits">9</span>
             
 
             
@@ -743,7 +820,7 @@
 
             
 
-            <code class="ruby">        deposit = &#39;Pineapple&#39;</code>
+            <code class="ruby">        deposit = &#39;Bitcoin&#39;</code>
           </li>
         </div>
       
@@ -759,24 +836,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        message = &#39;Please deposit a valid amount above 5 pounds&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="21">
+          <li class="covered" data-hits="2" data-linenumber="20">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }.to raise_error message</code>
+            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">        .to raise_error(Transaction::ERROR1)</code>
           </li>
         </div>
       
@@ -809,7 +886,7 @@
 
             
 
-            <code class="ruby">      it &#39;when credit amount is decimal values&#39; do</code>
+            <code class="ruby">      it &#39;when credit amount not a fixnum and has decimal values&#39; do</code>
           </li>
         </div>
       
@@ -836,24 +913,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        message = &#39;Only deposits in pounds with no pence acceppted&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="28">
+          <li class="covered" data-hits="2" data-linenumber="27">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }.to raise_error message</code>
+            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">        .to raise_error(Transaction::ERROR2)</code>
           </li>
         </div>
       
@@ -913,24 +990,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        message = &#39;Deposit amount needs to be above 5 pounds&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="35">
+          <li class="covered" data-hits="2" data-linenumber="34">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }.to raise_error message</code>
+            <code class="ruby">        expect { transaction.credit(deposit, account.balance) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">        .to raise_error(Transaction::ERROR3)</code>
           </li>
         </div>
       
@@ -1139,12 +1216,188 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    context &#39;raises error&#39; do </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;when withdrawal amount is not an integer&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        withdrawal = &#39;Chocolate Gold&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        allow(account).to receive(:balance).and_return(withdrawal)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="59">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        expect { transaction.debit(withdrawal, account.balance) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby">        .to raise_error(Transaction::ERROR4)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;when withdrawal amount is negative&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        withdrawal = -2.52</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        allow(account).to receive(:balance).and_return(withdrawal)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="66">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        expect { transaction.debit(withdrawal, account.balance) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">        .to raise_error(Transaction::ERROR4)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
