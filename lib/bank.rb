@@ -10,7 +10,7 @@ class Bank
 
   def credit(deposit_amount)
     @account.balance += deposit_amount
-    # @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
+    @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
   end
 
   def debit(withdrawal_amount)

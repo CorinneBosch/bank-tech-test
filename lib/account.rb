@@ -7,6 +7,6 @@ class Account
   def initialize(account_holders_name, start_balance=DEFAULT_BALANCE)
    @name = account_holders_name
    @balance = start_balance
-   @transactions =[]
+   @transactions = []
   end
 end
