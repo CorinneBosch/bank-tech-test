@@ -13,7 +13,7 @@ class Transaction
   end
 
   def debit(withdrawal_amount, balance)
-    check_withdrawal(withdrawal_amount)
+    check_withdrawal(withdrawal_amount, balance)
     "#{date_today} || || #{'%.2f' % withdrawal_amount} || #{'%.2f' % balance}"
   end
 
@@ -24,9 +24,11 @@ class Transaction
     raise ERROR3 if deposit_amount < 5
   end
 
-  def check_withdrawal(withdrawal_amount)
+  def check_withdrawal(withdrawal_amount, balance)
     raise ERROR4 if !withdrawal_amount.is_a?(Numeric)
     raise ERROR4 if withdrawal_amount < 0
+    error = "Your funds only allow you to withdraw £#{balance}"
+    raise error if withdrawal_amount > balance
   end
 
   def date_today

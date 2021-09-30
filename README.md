@@ -50,7 +50,7 @@ $ git clone https://github.com/CorinneBosch/bank-tech-test.git
 ## Rspec and Simplecov
 
 To test all units and features at once in your terminal.\
-Use format documentation use the `-fd` shortcut.
+Print out the format documentation with the `-fd` shortcut.
 
 ```
 $ rspec

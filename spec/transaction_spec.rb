@@ -70,9 +70,17 @@ describe Transaction do
 
       it 'when withdrawal amount is negative' do
         withdrawal = -2.52
-        allow(account).to receive(:balance).and_return(withdrawal)
+        allow(account).to receive(:balance).and_return(200)
         expect { transaction.debit(withdrawal, account.balance) }.
           to raise_error(Transaction::ERROR4)
+      end
+
+      it 'when withdrawal is greater than accounts current balance' do
+        withdrawal = 45
+        allow(account).to receive(:balance).and_return(40)
+        message = 'Your funds only allow you to withdraw £40'
+        expect { transaction.debit(withdrawal, account.balance) }.
+          to raise_error message
       end
     end
   end

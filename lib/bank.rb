@@ -27,17 +27,12 @@ class Bank
     output(@account.transactions)
   end
 
+  def check_balance
+    "There is a total balance of £#{@account.balance} in #{@account.name}\'s account"
+  end 
+
   private
   def check_transactions
     raise 'You have no transactions thus far' if @account.transactions.empty?
   end
 end
-
-# bank = Bank.new(Account.new('Sir David Attenborough', 500))
-# p bank.credit(500)
-# p bank.debit(20)
-# p bank.credit(400)
-# p bank.debit(15)]
-# bank.account.transactions
-# p '--' * 20
-# bank.print_statement

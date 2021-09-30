@@ -22,17 +22,6 @@ describe Bank do
     end
   end
 
-  # describe '#credit' do
-  #   let(:account) { double('Account') }
-
-  #   it 'deposits money and adds amount to accounts balance' do
-  #     # account = double('Account')
-  #     expect(account).to receive(:name).with('Gandalf')
-  #     expect(account).to receive(:balance).with(200)
-  #     Bank.new.credit(200)
-  #   end
-  # end
-
   describe '#credit' do
     it 'deposits money and adds amount to accounts balance' do
       bank.credit(100)
@@ -82,6 +71,13 @@ describe Bank do
         message = 'You have no transactions thus far'
         expect { bank.print_statement}.to raise_error message
       end
+    end
+  end
+
+  describe '#check_balance' do
+    it 'informs account holder about current balance' do
+      message = "There is a total balance of £500 in Professor McGonagall\'s account"
+      expect(bank.check_balance).to eq message 
     end
   end
 end
