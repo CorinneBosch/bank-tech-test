@@ -24,10 +24,17 @@ describe Account do
     end
   end
 
-  context '#deposit' do 
+  context '#add_to_balance' do 
     it 'adds transaction to balance' do 
-      account.deposit(100)
+      account.add_to_balance(100)
       expect(account.balance).to eq(1100)
+    end
+  end
+
+  context '#deduct_from_balance' do 
+    it 'deducts transaction from balance' do 
+      account.deduct_from_balance(75)
+      expect(account.balance).to eq(925) 
     end
   end
 
