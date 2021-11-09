@@ -1,6 +1,5 @@
 class Account
   attr_reader :name, :balance, :transactions 
-  # attr_writer :balance, :transactions
   
   DEFAULT_BALANCE = 0
   
