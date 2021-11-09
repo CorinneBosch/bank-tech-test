@@ -3,7 +3,7 @@ require 'account'
 describe Account do
   let(:account) { described_class.new('Sir David Attenborough', 1000) }
 
-  describe '#initializes' do
+  context '#initializes' do
     it 'with a name of the account holder' do 
       new_account = Account.new('Sir David Attenborough')
       expect(new_account.name).to eq('Sir David Attenborough')
@@ -21,6 +21,20 @@ describe Account do
 
     it 'with an empty array of transactios' do 
       expect(account.transactions).to be_empty
+    end
+  end
+
+  context '#deposit' do 
+    it 'adds transaction to balance' do 
+      account.deposit(100)
+      expect(account.balance).to eq(1100)
+    end
+  end
+
+  context '#add_transaction' do 
+    it 'adds transaction to balance' do 
+      account.add_transaction(200)
+      expect(account.transactions).to eq([200]) 
     end
   end
 end

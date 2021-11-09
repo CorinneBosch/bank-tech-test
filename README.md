@@ -117,7 +117,7 @@ So that I can have an overview over my exenses
 I would like to print out my bank statements with dates
 ```
 
-## Povided input output example & requirements
+## Provided input output example & requirements
 
 ### Requirements
 
@@ -141,4 +141,4 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-Source of original Repository & README instuctions: [Makers Academy GitHub](https://github.com/makersacademy/course/blob/main/individual_challenges/bank_tech_test.md)
+Source of original Repository & instuctions: [Makers Academy GitHub](https://github.com/makersacademy/course/blob/main/individual_challenges/bank_tech_test.md)

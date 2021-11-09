@@ -1,6 +1,6 @@
 class Account
-  attr_reader :name, :balance, :transactions
-  attr_writer :balance, :transactions
+  attr_reader :name, :balance, :transactions 
+  # attr_writer :balance, :transactions
   
   DEFAULT_BALANCE = 0
   
@@ -8,5 +8,13 @@ class Account
    @name = account_holders_name
    @balance = start_balance
    @transactions = []
+  end
+
+  def deposit(transaction)
+    @balance += transaction
+  end
+
+  def add_transaction(transaction)
+    @transactions.push(transaction)
   end
 end

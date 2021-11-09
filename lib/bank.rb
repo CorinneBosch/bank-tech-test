@@ -4,15 +4,18 @@ require_relative 'transaction'
 
 class Bank
   include Statement
-  attr_reader :account
+  # attr_reader :account
 
-  def initialize(account = Account.new(account_holders_name, start_balance=DEFAULT_BALANCE))
+  def initialize(account = Account.new(account_holders_name, start_balance=DEFAULT_BALANCE), transactions = Transaction)
     @account = account
+    @transactions = transactions
   end
 
   def credit(deposit_amount)
-    @account.balance += deposit_amount
-    @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
+    # @account.balance += deposit_amount
+    # @account.transactions.push(Transaction.new.credit(deposit_amount, @account.balance))
+    @account.deposit(deposit_amount)
+    @account.add_transaction(@transactions.new.credit(deposit_amount, @account.balance))
     "£#{deposit_amount} successfully deposited"
   end
 
