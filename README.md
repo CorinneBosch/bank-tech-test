@@ -17,8 +17,11 @@
 ||\\$//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\$//||
 ||====================================================================||
 ```
+______
+ 
+[Set up](#Setup) | [Interact](#Interact) | [Run Tests](#Tests) | [User Stories](#User-Stories) | [Requirements](#Requirements)
 
-## Setup
+## <a name="Setup">Set up</a>
 
 1. **Fork** this [Bank-Tech-Test Repository](https://github.com/CorinneBosch/bank-tech-test)
 2. Clone **your** fork to your computer or clone this repository directly.
@@ -31,8 +34,7 @@ $ git clone https://github.com/CorinneBosch/bank-tech-test.git
 4. Run `gem install bundler` if you dont have bundler.
 5. Once installed, run `bundle` to ensure you have all the gems.
 
-## Interact with the program
-
+## <a name="Interact">Interact with the program</a>
 `irb`
 
 Require the bank file:
@@ -66,7 +68,7 @@ To leave the program exit irb.
 
 `exit`
 
-## Rspec and Simplecov
+## <a name="Tests">Test with Rspec and Simplecov</a>
 
 To test all units and features at once in your terminal.\
 Print out the format documentation with the `-fd` shortcut.
@@ -93,7 +95,7 @@ To gain a better overview, direct into your `coverage` directory and open `index
 $ open coverage/index.html
 ```
 
-## Planning & Userstories:
+## <a name="User-Stories">Planning & Userstories:</a>
 
 I started by creating the simplest `BankAccount` class and then extracted the logic into two other classes, `Account`, `Transaction` and one Module `Statement`.
 My planning prior to the challenge: [Mindmap/Workflow](https://github.com/CorinneBosch/bank-tech-test/blob/main/images/mindmap.png)
@@ -117,7 +119,7 @@ So that I can have an overview over my exenses
 I would like to print out my bank statements with dates
 ```
 
-## Provided input output example & requirements
+## <a name="Requirements">Provided input output example & requirements</a>
 
 ### Requirements
 
